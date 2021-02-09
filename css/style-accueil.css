@@ -1,0 +1,614 @@
+/* On initialise la page d'accueil avec aucune marge et aucun overflow hors de la page (pour éviter du scroll inutile) */
+body{
+    margin-bottom: 0 !important;
+    overflow: hidden;
+}
+
+/* L'accueil grand écran est caché en mobile */
+#accueil-grand-ecran{
+    display: none;
+}
+
+/* L'accueil mobile est affiché en mobile, mais caché en grand écran */
+#accueil-mobile{
+    display: initial;
+}
+
+
+/* Un groupe contenant le "Commencez à explorer notre programme" de la version mobile (on décale le titre, logo et barre mauve pour centrer le tout dans la page) */
+#accueil-mobile-title-wrapper{
+    /*margin-top: 30vh;*/
+    margin-left: 5%;
+    margin-right: 5%;
+    /*margin-top: calc(50vh - 25vw);*/
+    position: fixed;
+    top: calc(45% - 25vw);
+}
+
+/* On initie le texte de l'accueil avec en premier lieu la version mobile */
+#site-title, #site-subtitle{ 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .2em;
+    text-align: center;
+}
+
+/* Paramètres spécifiques du titre de la version mobile */
+#site-title{
+    font-weight: bolder;
+    font-size: 3.01vw;
+    letter-spacing: .2em;
+    margin-bottom: 0px;
+    overflow-wrap: break-word;
+}
+
+/* Paramètres spécifiques du sous-titre de la version mobile */
+#site-subtitle{
+    font-weight: normal;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 3vh;
+    font-size: 2.5vw;
+    letter-spacing: .2em;
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+/* Couleur de hover lorsque le sous-titre est survolé par la souris */
+#site-subtitle:hover{
+    color: #6A07D2;
+    transition: 0.3s;
+}
+
+/* Couleur de clic lorsque le sous-titre est cliqué dessus */
+#site-subtitle:active{
+    color: white;
+    transition: 0.1s;
+}
+
+/* Initialisation de la barre en dessous du titre "Techniques d'Intégration Multimédia" */
+#site-title-barre{
+    background-color: #FF04A1;
+    height: 5px;
+    margin-top: .3vw;
+}
+
+/* Initialisation du logo TIM de la page mobile */
+#logo-tim-mobile{
+    background-image: url("../media/tim-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 47vw;
+    filter: brightness(-100%);
+}
+
+
+
+/* Initialisation de la flèche au dessus du "Commencez à explorer notre programme" de la page mobile */
+.fleche-mobile{
+    /* left: 24vw; */
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    border-style: solid;
+    border-color: #6a07d2;
+    border-width: 0px 5px 5px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    left: 42.5vw  !important;
+    bottom: 8vh !important;
+    width: 15vw !important;
+    height: 15vw !important;
+    border-width: 0px 2vw 2vw 0px !important;
+    box-shadow: 0.9vw 0.9vw 0px 0px rgba(223, 197, 22, 0.75) !important;
+    -webkit-box-shadow: 0.9vw 0.9vw 0px 0px rgba(223, 197, 22, 0.75) !important;
+    -moz-box-shadow: 0.9vw 0.9vw 0px 0px rgba(223, 197, 22, 0.75) !important;
+}
+
+/* Paramètres du conteneur de la page mobile (on le place tout en bas de la page) */
+#fleche-mobile-wrapper{
+    /* align: center; */
+    position: fixed;
+    width: 50vw;
+    justify-content: space-around;
+    /* margin-left: 25vw; */
+    left: 0vw;
+    bottom: 5vw;
+    z-index: -9999;
+    animation: fleche-mobile 4.80531s cubic-bezier(.5,0,.5,1) infinite;
+}
+
+
+
+/* Le footer de l'accueil est unique, donc on doit  l'afficher différemment du footer régulier */
+.footer-accueil{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 2.8em;
+    text-align: 10%;
+    bottom: 0%;
+
+}
+
+/* On enlève la décoration des liens */
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Vu que le logo de Maisonneuve n'est pas une icône de FontAwesome mais une image, on doit l'afficher différemment des autres icônes */
+#maisonneuve-accueil{
+    position: absolute;
+    display: none;
+    margin-top: 0.625em; 
+    margin-left: 1.625em;
+    width: 1.5625em;
+    height:1.5625em;
+    background-image: url('../media/maisonneuve.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+/* Initialisation du conteneur des rectangles à droite de la page d'accueil (qui sont dynamiques) */
+#rectangles-droit{
+    position: absolute;
+    margin: 0 0 0 0;
+    width: 40vw;
+    height: 60vh;
+    bottom: 0px;
+    right: 0px;
+    z-index: -999;
+}
+
+/* Initialisation des rectangles à gauche de la page d'accueil (statiques) */
+#rectangles-gauche{
+    /*background-color: blue;*/
+    background-image: url("../media/rec2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    margin: 0 0 0 0;
+    width: 25vw;
+    height: 90vh;
+    bottom: 0px;
+    left: 0px;
+    z-index: -999;
+}
+
+/* Initialisation du conteneur SVG qui contient tout les calques des rectangles qui sont en bas à droite de la page */
+#rectangles-droit svg{
+    /*background-color: red;*/
+    /*background-image: url("../media/rec1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-content: bottom right;
+    transform-origin: botttom right;
+    max-height: 75vh;
+}
+
+/* On s'assure que les rectangles à droites de la page sont affichés correctement et que leur conteneur reste en place */
+#rectangles-droit-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    width: auto;
+
+}
+
+
+
+/* Les liens vers les animations des 23 rectangles qui sont animés */
+#RectangleBouge1{
+    animation: bouge1 4.8746s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge2{
+    animation: bouge2 4.26574s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge3{
+    animation: bouge3 4.80531s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge4{
+    animation: bouge4 4.1657s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge5{
+    animation: bouge5 4.2451s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge6{
+    animation: bouge6 4.7543s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge7{
+    animation: bouge7 4.48438s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge8{
+    animation: bouge8 3.8754s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge9{
+    animation: bouge9 4.9437s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge10{
+    animation: bouge10 3.8754s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge11{
+    animation: bouge11 4.874s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge12{
+    animation: bouge12 4.15627s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge13{
+    animation: bouge13 5.1546s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge14{
+    animation: bouge14 4.89456s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge15{
+    animation: bouge15 5.678964s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge16{
+    animation: bouge16 4.78964s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge17{
+    animation: bouge17 4.05466s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge18{
+    animation: bouge18 4.987465s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge19{
+    animation: bouge19 4.6536s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge20{
+    animation: bouge20 4.1657s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge21{
+    animation: bouge21 4.879645s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge22{
+    animation: bouge22 4.25638s cubic-bezier(.6,0,.4,1) infinite;
+}
+
+#RectangleBouge23{
+    animation: bouge23 4.789645s cubic-bezier(.6,0,.4,1) infinite;
+}
+/* Fin des liens vers les animations */
+
+/* Keyframes de la flèche en haut du sous-titre mobile */
+@keyframes fleche-mobile {
+    0% { transform: translateY(-2vw) }
+    10% { transform: translateY(2vw)}
+    20% { transform: translateY(-2vw) }
+    30% { transform: translateY(2vw)}
+    40% { transform: translateY(-2vw) }
+    100% { transform: translateY(-2vw) }
+}
+
+/* Toutes les animations de chacun des rectangles qui sont en bas à droite de la page */
+@keyframes bouge1 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(0%)}
+    100% { transform: translateX(0%) }
+}
+@keyframes bouge2 {
+    0% { transform: translateX(2%) }
+    50% { transform: translateX(-1%)}
+    100% { transform: translateX(2%) }
+} 
+@keyframes bouge3 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(1%)}
+    100% { transform: translateY(0%) }
+}   
+@keyframes bouge4 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+}   
+@keyframes bouge5 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge6 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+}    
+@keyframes bouge7 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+}    
+@keyframes bouge8 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+}   
+@keyframes bouge9 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(1%)}
+    100% { transform: translateY(0%) }
+}   
+@keyframes bouge10 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+}   
+@keyframes bouge11 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge12 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(1%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge13 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(-3%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge14 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(0%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge15 {
+    0% { transform: translateX(1%) }
+    50% { transform: translateX(-3%)}
+    100% { transform: translateX(1%) }
+} 
+@keyframes bouge16 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(-3%)}
+    100% { transform: translateY(0%) }
+} 
+@keyframes bouge17 {
+    0% { transform: translateY(-1%) }
+    50% { transform: translateY(1%)}
+    100% { transform: translateY(-1%) }
+} 
+@keyframes bouge18 {
+    0% { transform: translateY(1%) }
+    50% { transform: translateY(-1%)}
+    100% { transform: translateY(1%) }
+} 
+@keyframes bouge19 {
+    0% { transform: translateX(0%) }
+    50% { transform: translateX(3%)}
+    100% { transform: translateX(0%) }
+} 
+@keyframes bouge20 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(-1%)}
+    100% { transform: translateY(0%) }
+} 
+@keyframes bouge21 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(-1%)}
+    100% { transform: translateY(0%) }
+} 
+@keyframes bouge22 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(-2%)}
+    100% { transform: translateY(0%) }
+} 
+@keyframes bouge23 {
+    0% { transform: translateY(0%) }
+    50% { transform: translateY(-3%)}
+    100% { transform: translateY(0%) }
+} 
+/* Fin des animations des rectangles */
+
+
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 769px) {
+
+    /* On affiche l'accueil en version plus grand écrans à partir de cette résolution */
+    #accueil-grand-ecran{
+        display: initial;
+    }
+
+    /* On cache la version mobile à partir de cette résolution */
+    #accueil-mobile{
+        display: none;
+    }
+
+    /* On ajuste le padding et l'alignement du texte pour qu'il soit vers la gauche de l'écran */
+    #site-title, #site-subtitle{
+        padding-left: 10%;
+        text-align: left;
+    }
+
+    /* On ajuste la taille du titre dépendamment de la largeur de la page, jusqu'à un certain maximum */
+    #site-title{
+        font-size: 1.4em;
+        letter-spacing: .28em;
+        font-size: min(1.4em, 2.5vw);
+        padding-top: 30vh;
+        margin-right: 0%;
+    }
+
+    /* On ajuste la taille de la barre en bas du titre dépendamment de la largeur de la page, jusqu'à un certain maximum */
+    #site-title-barre{
+        height: 4px;
+        width: min(45.30em, 80.89vw);
+        margin-top: 8px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* On ajuste la taille du sous-titre dépendamment de la largeur de la page, jusqu'à un certain maximum */
+    #site-subtitle{
+        position: initial;
+        bottom: initial;
+        text-align: left;
+        width: min(33em, 60.78vw);
+        font-weight: normal;
+        font-size: min(1em, 1.78vw);
+        padding-left: 10%;
+        letter-spacing: .2em;
+        margin-top: 8px;
+        pointer-events: all;
+    }
+
+    /* Pour une raison quelconque, on pouvais cliquer sur le lien du sous-titre sur toute la largeur de la page. On enlève donc tout événement de pointeur sur cet élément pour les garder uniquement pour le texte lui-même */
+    #site-subtitle-wrapper{
+        pointer-events: none;
+    }
+
+    /* L'affichage de la flèche à droite de "Commencez à explorer notre programme" */
+    .fleche-programme{
+        display: block;
+        box-sizing: border-box;
+        height: min(1.5vw, 0.9em);
+        width: min(1.5vw, 0.9em);
+        border-style: solid;
+        border-color: #6a07d2;
+        border-width: 0px min(0.6vw, .28em) min(0.6vw, .28em) 0px;
+        transform: rotate(-45deg) translate(0, 0);
+        transition: border-width 150ms ease-in-out;
+        box-shadow: 3px 3px 0px 0px rgba(223, 197, 22, 0.75);
+        -webkit-box-shadow: 3px 3px 0px 0px rgba(223, 197, 22, 0.75);
+        -moz-box-shadow: 3px 3px 0px 0px rgba(223, 197, 22, 0.75);
+        position: relative;
+        cursor: pointer;
+        animation: flechesSousTitre 1.5s cubic-bezier(.6,0,.4,1) infinite;
+    }
+    /* Animation subtile de la flèche du sous-titre */
+    @keyframes flechesSousTitre{
+        0% { transform: rotate(-45deg) translate(0, 0); }
+        50% { transform: rotate(-45deg) translate(20%, 20%); }
+        100% { transform: rotate(-45deg) translate(0, 0); }
+    }
+
+    /* La position de la flèche à droite de "Commencez à explorer notre programme" (qui est animé par script) */
+    #fleche-programme-wrapper{
+        padding-left: 100%;
+        text-align: left;
+        /* align: center; */
+        position: relative;
+        justify-content: space-around;
+        /* margin-left: 25vw; */
+        left: 0vw;
+        margin-top: -3.1%;
+        width: 5%;
+        z-index: -9999;
+        /* background-color: red; */
+        opacity: 100%;
+        transform: translateX(-2%);
+        transition: transform 0.5s;
+        transition-duration: 0.5s;
+    }
+
+    /* Positionnement du groupe de boutons dans le footer de la page d'accueil (qui est unique) */
+    .media-accueil {
+        position: fixed;
+        display: flex;
+        padding: 0.6rem;
+        font-size: 1.4em;
+        letter-spacing: 14px;
+        bottom: 0;
+        right: 0;
+    }
+
+    /* Les seuls liens avec une couleur différente (si nous ne comptons pas la naviguation mobile) sont les boutons du footer */
+    .media-accueil a{
+        color: white;
+    }
+
+    /* La couleur de hover de ces boutons aussi sont différent */
+    .media-accueil a:hover{
+        color: grey;
+        transition: 0.3s;
+    }
+
+    /* Affichage du footer et de l'icône de maisonneuve en mode Flex */
+    #maisonneuve-accueil, .footer-accueil{
+        display: flex;
+    }
+}
+
+/* GRAND ÉCRAN */
+@media screen and (min-width: 1200px) {
+    /* On ajuste la marge, le padding, l'alignement et la taille du titre pour le mode grand écran */
+    #site-title{
+        font-size: 2vw;
+        letter-spacing: .4vw;
+        padding-top: 30vh;
+        margin-right: 0%;
+    }
+
+    /* On ajuste la marge et la taille de la barre en dessous du titre pour le mode grand écran */
+    #site-title-barre{
+        height: 5px;
+        width: 59.2vw;
+        margin-top: 8px;
+    }
+
+    /* On ajuste la marge et la taille du sous-titre pour le mode grand écran */
+    #site-subtitle{
+        font-weight: normal;
+        font-size: 1.3vw;
+        letter-spacing: .2em;
+        margin-top: 8px;
+    }
+   
+    /* Ajustement de la taille et épaisseur de la flèche à droite du sous-titre */
+    .fleche-programme{
+        border-width: 0px 0.4vw 0.4vw 0px;
+        box-shadow: 0.3vw 0.3vw 0px 0px rgba(223, 197, 22, 0.75);
+        -webkit-box-shadow: 0.3vw 0.3vw 0px 0px rgba(223, 197, 22, 0.75);
+        -moz-box-shadow: 0.3vw 0.3vw 0px 0px rgba(223, 197, 22, 0.75);
+    }
+
+    /* Ajustement du footer pour la version grand écran */
+    .footer-accueil {
+        position: absolute;
+        height: 2.8em;
+        right: 0;
+        bottom: 0;
+        text-align: 10%;
+       
+    }
+
+    /* Ajustement de la taille des icônes du footer de la page grand écran */
+    .media-accueil {
+        font-size: 1.5em;
+    }
+}
+

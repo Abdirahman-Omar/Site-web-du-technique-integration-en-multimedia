@@ -1,0 +1,198 @@
+#global{
+    margin: 0 auto;
+    
+}
+ h1{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: bolder;
+}
+#notreProgramme{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:13em;
+    width: 100%;
+    margin-bottom:20vw;
+}
+#grosLosange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 25vw;
+    background-color: #6a07d2;
+    transform:rotate(45deg);
+    border:#ff04a1 0.3em solid;
+    z-index: 2;
+}
+#ligne{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100%;
+    height:0.3vw;
+    background-color: #ff04a1;
+    z-index: 1;
+}
+#grosLosange h1 {
+    padding-bottom: 0.2em;
+    text-align: center;
+    color : #dfc516;
+    transform: rotate(-45deg);
+    font-size:3vw;
+    letter-spacing: 0.1em;
+}
+#cercles{
+    /*margin-top:2em;*/
+    background-image:url("../media/motif-picot.png");
+    position:absolute;
+    width:40em;
+    height:20em;
+    /*background-color:#0da5c5;*/
+}
+.sessions{
+    display: flex;
+    width:100%;
+    margin-bottom:10vw;
+}
+
+.lesCours{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.lesCours>div{
+    padding: 0 !important;
+    margin-right:4vw;
+    margin-left:4vw;
+}
+.btn{
+    text-align: center;
+}
+
+.lignes{
+    margin-top:2vw;
+    position: absolute;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100%;
+    height:4vw;
+    background-color: #e427ec;
+}
+#listeDesCours{
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+#listeDesCours div:nth-child(3) .lignes{
+    background-color: #0da5c5;    
+}
+#listeDesCours div:nth-child(4) .lignes{
+    background-color: #0da5c5;    
+}
+#listeDesCours div:nth-child(5) .lignes{
+    background-color: #ff04a1;    
+}
+#listeDesCours div:nth-child(6) .lignes{
+    background-color: #ff04a1;   
+}
+.sessions>h1{
+    position: absolute;
+    text-transform: uppercase;
+    font-size:1.5vw;
+    padding-left:1vw;
+    margin-top:-2vw;
+}
+.btnChoix{
+    cursor:pointer;
+    position: relative;
+    display:inline-block;
+    width: 0.5vw;
+    height: 0.5vw;
+    border-radius: 50%;
+    border: white solid 0.12vw;
+    z-index: 1;
+    transition: background-color 0.6s ease;
+    margin-left:0.5vw;
+
+}
+.dots{
+    z-index: 9999;
+    width:3vw;
+    margin-left:3.2vw;
+    margin-top:-2vw;
+
+}
+.active, .btnChoix:hover{
+    background-color:white;
+}
+.cache{
+    display: none !important;
+}
+.textBtn{
+    font-size:0.9vw;
+}
+#grilleCours{
+    display: flex;
+    width:11vw;
+    height:4vw;
+    margin-left:85vw;
+    border:solid 0.2em #6a07d2;
+    margin-bottom: 5vw;
+    justify-self: center;
+    align-items: center;
+}
+#grilleTxt{
+    margin:0 auto;
+    text-align: center; 
+    font-family: "Comfortaa", cursive, Bold;
+    text-transform:uppercase;
+    font-size:0.9vw;
+    color:#6a07d2;
+    font-weight:bold;
+}
+#borderOffset{
+    position:absolute;
+    margin-top:1vw;
+    margin-left:0.5vw;
+    height: 4vw;
+    width: 11vw;
+    border: solid 0.2em #dfc516;
+}
+#grilleCours:hover{
+    border-color:#dfc516
+}
+@media screen and (max-width: 1650px)and (min-width:1301px){
+    .dots{
+        margin-left:3.5vw;
+    }
+    }
+@media screen and (max-width: 1300px) and (min-width:1050px) {
+
+    .dots{
+        margin-left:4vw;
+        margin-top:-2.5vw;
+    }
+}    
+@media screen and (max-width: 1050px) and (min-width:600px) {
+
+    .dots{
+        margin-left:4vw;
+        margin-top:-2.5vw;
+        width:4vw;
+    }
+    #grilleCours{
+        margin-bottom: 7vw;
+    }
+}   
+@media screen and (min-width: 770px)  {
+    .lesCours{
+        display:flex !important;
+    }
+}   
+
+
+

@@ -1,0 +1,388 @@
+/* Placement du logo TIM en haut à gauche de la naviguation dans son groupe */
+#tim-logo{
+    position: absolute;
+    float: left;
+    width: 5em;
+    height:2.5em;
+    background-image: url('../media/tim-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+/* Placement du lien sur le logo TIM de la naviguation (caché initialement en mode mobile) */
+#tim-logo-link{
+  position: absolute;
+  transform: translate(20px, 20px);
+  width: 5em;
+  height: 2.5em;
+  display: none;
+}
+
+/* Positionnement des boutons de la naviguation en haut à droite de la page */
+#site-navigation{
+  top: 0;
+  right: 0;
+  position: absolute;
+  float: right;
+  width: max(50%, 10em);
+  text-align: left;
+  font-family: 'Comfortaa', cursive;
+  font-weight: normal;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* Espacement et taille des boutons de la naviguation grand écran */
+#site-navigation .page_item{
+  margin: 0 0.625em 0 1.875em;
+  width: auto;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+/* Le menu de naviguation mobile est affiché initialement, donc on cache la version grand écran */
+#primary-menu{
+  display: none;
+}
+
+/* Simple classe pour cacher l'overflow de certain groupes d'éléments */
+.overflow-hide {
+  width: 100%;
+  /* height: 100%; */
+  /* padding: 0; */
+  /* margin: 0; */
+  bottom: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+
+/* Placement du groupe parent de tout le menu de naviguation mobile et de sa couleur de fond */
+#primary-menu-burger{
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  margin: 0 0 0 0;
+  width: 50%;
+  /*height: 100vh;*/
+  bottom: 0;
+  text-align: right;
+  background-color: #6A07D2;
+  transform: translate(100%, 0);
+  z-index: 999;
+}
+
+/* En raison d'un problème de scrolling en mobile, on doit placer une autre couleur de fond pour éviter d'avoir un fond qui se coupe en bas */
+#primary-menu-burger-scrollbg{
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100vh;
+  text-align: right;
+  background-color: #6A07D2;
+  z-index: 998;
+}
+
+/* Une grille 1x2 pour placer les boutons (en haut) et les icônes (en bas) dans la naviguation mobile */
+#nav-mobile-grid{
+  overflow: hidden;
+  margin: 0;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 33.333333333333333% 66.6666666666666666666%;
+  align-items: center;
+}
+
+/* Les groupes dans la grilles du menu mobile prennent toute la grandeur de leurs espaces */
+.nav-mobile-griditem{
+  width: 100%;
+  height: 100%;
+}
+
+/* Les icône du footer régulier sont placé différemment dans la navigation mobile (le footer régulier est caché en mobile,) donc on change complètement le placement de leur conteneur */
+#nav-mobile-footer{
+  display: grid;
+  width: 100%;
+  /* height: 100%; */
+  bottom: 5%;
+  align-items: center;
+}
+
+/* Placement du groupe d'icônes dans la naviguation mobile */
+#nav-mobile-footer-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Affichage des icônes dans la naviguation mobile */
+.nav-mobile-footer-icon{
+  padding: min(1.5vh, 10%) 0 min(1.5vh, 10%) 0;
+  font-size: min(400%, 7vh);
+}
+
+/* Le logo de Maisonneuve n'est pas une icône SVG de FontAwesome, donc son affichage doit être différent */
+#maisonneuve-logo-nav{
+  width: Min(10vw, 5vh);;
+  height: Min(10vw, 5vh);;
+  background-image: url('../media/maisonneuve.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Marge unique pour la dernière icône (en dessous des autres) dans la naviguation mobile  */
+.nav-mobile-footer-icon-bottom{
+  margin-bottom: Min(4vw, 3vh);
+}
+
+/* Padding unique pour la première icône (en haut des autres) dans la naviguation mobile */
+.nav-mobile-footer-icon-top{
+  padding-top: Min(4vw, 3vh);
+}
+
+/* Le premier rectangle autour des icônes de la naviguation mobile */
+#nav-mobile-footer-bordure-top{
+  position: absolute;
+  width: 7em;
+  height: 63%;
+  position: 0 0 0 0;
+  border: 3px white solid;
+  pointer-events: none;
+}
+
+/* Le second rectangle autour des icônes de la naviguation mobile */
+#nav-mobile-footer-bordure-bottom{
+  position: absolute;
+  width: 7em;
+  height: 63%;
+  position: 0 0 0 0;
+  border: 3px white solid;
+  transform: translate(-6px, -6px);
+  pointer-events: none;
+}
+
+/* Positionnement et couleur du bouton burger pour accéder à la naviguation mobile */
+#primary-menu-burger-bouton{
+  color: #dfc516;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 1em;
+  font-size: 4em;
+  transition: transform 0.5s;
+  transform: translate(-120%, 0) rotate(0);
+  pointer-events: all;
+}
+
+/* Placement du menu de naviguation mobile et sa largeur */
+#nav-menu-mobile {
+  position: relative;
+  padding: 0 0 0 0;
+  width: 100%;
+  margin: 0 0 0 -2vw !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Padding au dessus du premier bouton de la naviguation mobile */
+#nav-menu-mobile li:first-of-type{
+  padding-top: 1em;
+}
+
+/* Padding en dessous du dernier bouton de la naviguation mobile  */
+#nav-menu-mobile li:last-of-type{
+  padding-bottom: 1em;
+}
+
+/* Capitalisation, espacement et taille dynamique des boutons de la naviguation mobile */
+#site-navigation .page_item_burger{
+  font-size: min(1.6em, 4.8vw);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+/* Style du texte des boutons de la naviguation (blanc en mobile, noir en grand écran plus loin dans le CSS) */
+#site-navigation a{
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Couleur du texte des boutons de la naviguation lors d'un survolement (jaune en mobile, mauve en grand écran plus loin dans le CSS) */
+#site-navigation a:hover{
+  color: #dfc516;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+/* Couleur du texte des boutons de la naviguation lors d'un clic */
+#site-navigation a:active{
+  color: white;
+  transition: 0.1s;
+  font-weight: bold;
+}
+
+/* Les barres affichés en dessous des boutons de la naviguation mobile (utilisés pour souligner la page active, donc cachés initialement) */
+.barre_nav_mobile_group{
+  display: none;
+}
+
+/* Le style des barres en dessous des boutons de la naviguation mobile */
+.barre_nav_mobile_top_wrapper, .barre_nav_mobile_bottom_wrapper{
+  height: 0.1em;
+  width: 100%;
+  pointer-events: none;
+  margin-bottom: 0.3em;
+  text-align: -webkit-right;
+}
+
+/* Marge unique pour la première barre (mauve) de la naviguation mobile */
+.barre_nav_mobile_bottom_wrapper{
+  margin-bottom: 0;
+}
+
+/* Style de la barre mauve de la naviguation mobile */
+.barre_nav_mobile_top{
+  width: 70%;
+  height: 100%;
+  background-color: #ff04a1;
+}
+
+/* Style de la barre jaune de la naviguation mobile */
+.barre_nav_mobile_bottom{
+  width: 55%;
+  height: 100%;
+  background-color: #dfc516;
+}
+
+/* Style du menu de naviguation grand écran */
+#site-navigation #primary-menu .nav-menu{
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* On retire le style de la liste utilisé pour la naviguation grand écran */
+#site-navigation li{
+  list-style: none;
+}
+
+/* Style de la barre mauve de la naviguation grand écran */
+#site-navigation #barre-haut{
+  float: left;
+  background-color: #FF04A1;
+  width: 100px;
+  height: 3px;
+  margin-top: -15px;
+  margin-left: 125vw;
+  transition-timing-function: cubic-bezier(.15,.66,.27,1);
+}
+
+/* Style de la barre jaune de la naviguation grand écran */
+#site-navigation #barre-bas{
+  float: left;
+  background-color: #DFC516;
+  width: 70px;
+  height: 3px;
+  margin-top: -5px;
+  margin-left: 125vw;
+  transition-timing-function: cubic-bezier(.15,.66,.27,1);
+}
+
+/* TABLETTE */
+@media screen and (min-width: 769px) {
+  /* On affiche le menu de naviguation grand écran... */
+  #primary-menu{
+    display: inherit;
+}
+
+  /* ...Et on cache celui en version mobile */
+  #primary-menu-burger{
+    display: none;
+  }
+
+  /* Ajustement de la couleur initiale des boutons de la naviguation pour le mode grand écran */
+  #site-navigation a{
+    color: black;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  /* Ajustement de la couleur de survol des boutons de la naviguation pour le mode grand écran */
+  #site-navigation a:hover{
+    color: #6A07D2;
+    transition: 0.3s;
+    font-weight: bold;
+  }
+
+  /* Positionnement et largeur de la naviguation grand écran */
+  #site-navigation{
+    position: relative;
+    width: 70%;
+    margin-top: 15px;
+  }
+
+  /* Positionnement des boutons de la naviguation grand écran */
+  #site-navigation .page_item{
+    margin: 0 0.625em 0 1.875em;
+    font-size: 0.84em;
+  }
+
+  /* Taille du logo TIM en haut à gauche de l'écran */
+  #tim-logo{
+    width: 3.2em;
+    height: 1.6em;
+  }
+
+  /* Positionnement du logo TIM en haut à gauche de l'écran et affichage de celui-ci en mode grand écran */
+  #tim-logo-link{
+    transform: translate(15px, 15px);
+    width: 3.2em;
+    height: 1.6em;
+    display: initial;
+  }
+}
+
+/* GRAND ÉCRAN */
+@media screen and (min-width: 1200px) {
+  /* Ajustement du positionnement et de la taille du menu de naviguation */
+  #site-navigation{
+    position: relative;
+    width: 90%;
+    margin-top: 1.25em;
+  }
+
+  /* Ajustement de la taille des boutons du menu de naviguation */
+  #site-navigation .page_item{
+    margin: 0 1.5625em 0 3em;
+    font-size: 1.25em;
+  }
+
+  /* Ajustement de la taille du logo TIM */
+  #tim-logo{
+    width: 4.4em;
+    height:2.2em;
+  }
+
+  /* Ajustement du positionnement du logo TIM */
+  #tim-logo-link{
+    transform: translate(15px, 15px);
+    width: 5em;
+    height: 2.5em;
+  }
+}

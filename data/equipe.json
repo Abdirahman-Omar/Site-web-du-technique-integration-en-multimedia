@@ -1,0 +1,88 @@
+[
+    {
+        "nom": "Camille Semaan",
+        "photo": "media/camille.jpg",
+        "courriel": "csemaan@cmaisonneuve.qc.ca",
+        "description": "Ma vocation : communiquer connaissances et savoir-faire. Ma devise : 'Comprendre et ne pas juger' (Georges Simenon) \n \n On a tous notre temps"
+    },
+    {
+        "nom": "Caroline Martin",
+        "photo": "media/caroline.jpg",
+        "courriel": "cmartin@cmaisonneuve.qc.ca",
+        "description": "On me traite de Geek car je programme en PHP depuis pratiquement sa création et bien avant sa réelle utilisation dans les sites Web. J'aime, voire je suis passionnée par la programmation informatique. Je joue à D&D \n Mais, je ne suis pas que cela !"
+    },
+    {
+        "nom": "Dominic Girard",
+        "photo": "media/dominic.jpg",
+        "courriel": "dgirard@cmaisonneuve.qc.ca",
+        "description": "Je suis un passionné de création! Que ce soit pour un site Web, un jeu vidéo, ou un environnement physique interactif; la conception et le design c'est vraiment ce qui m'allume!"
+        
+    },
+    {
+        "nom": "Denis Pellerin",
+        "photo": "media/denis.jpg",
+        "courriel": "dpellerin@cmaisonneuve.qc.ca",
+        "description": "Après des études collégiales en arts, lettres et communications où il reçoit trois mentions d'excellence pour ses réalisations audiovisuelles, Denis poursuit ses études en production cinématographique à l'université Concordia où on lui décerne le \"Fine Arts Dean's Award 1989\"."
+    },
+    {
+        
+        "nom": "David Ross",
+        "photo": "media/jonathan.jpg",
+        "courriel": "dross@cmaisonneuve.qc.ca",
+        "description": "Je détient un baccalauréat en arts visuels de l'Université Concordia et une maitrise du School of the Art Institute de Chicago. J'enseigne en design et en intégration multimédia au Collège de Maisonneuve de Montréal depuis 2011. Au préalable, je suis impliqué dans le milieu des arts visuels comme coordonnateur d'expositions en art contemporain. En tant qu'artiste, je présente mon travail lors d'expositions dans plusieurs villes en Amérique du Nord ainsi qu'en France, au Portugal et au Japon. "
+    },
+    {
+        "nom": "Eddy Martin",
+        "photo": "media/eddy.jpg",
+        "courriel": "emartin@cmaisonneuve.qc.ca",
+        "description": "Des études en mathématiques informatiques (B. Sc) et une maîtrise en traitement d'images à l'UQAM m'ont amené à m'intéresser plus particulièrement à la programmation Web.J'ai côtoyé l'industrie pendant plusieurs années comme programmeur analyste pour finalement trouvé ma vocation en enseignement au Collège de maisonneuve.Les sujets qui m'intéresse touchent directement la création de sites Web adaptatifs du côté client et serveur.J'enseigne au département TIM depuis 2001."
+    },
+    {
+        "nom": "Grégory Bony",
+        "photo": "media/gregory.jpg",
+        "courriel": "gbony@cmaisonneuve.qc.ca",
+        "description": "Ma passion pour la retouche d’image et l’animation 2D et 3D a commencé très tôt, un peu après le biberon mais bien avant mes études dans ce domaine. Ma formation en France (Bac Arts Appliqués et BTS en Expression Visuelle) m’a permis de développer ma créativité et d’approfondir les techniques traditionnelles (arts plastiques, dessin anatomique, histoire de l’art, perspective, composition …)."
+    },
+    {
+        "nom": "Johanne Massé",
+        "photo": "media/johanne.jpg",
+        "courriel": "jmasse@cmaisonneuve.qc.ca",
+        "description": "Je suis gestionnaire de projet et architecte-paysagiste de formation mais, paradoxalement, passionnée depuis toujours par les 0 et les 1... J'ai cofondé à la fin des années 80 une entreprise spécialisée dans le développement de logiciels pour l'aménagement du territoire."
+    },
+    {
+        "nom": "Mathieu Dionne",
+        "photo": "media/mathieu.jpg",
+        "courriel": "mdionne@cmaisonneuve.qc.ca",
+        "description": "Prof « Made in Maisonneuve! » Je hante ces corridors depuis si longtemps… Eh oui…j’ai fait mes études collégiales ici même! J’y suis revenu après mes études universitaires à l’UQAM, en communication, concentration multimédia interactif."
+    },
+    {
+        "nom": "Martin St-Pierre",
+        "photo": "media/martin.jpg",
+        "courriel": "mstpierre@cmaisonneuve.qc.ca",
+        "description": "J’évolue dans le domaine professionnel depuis 1988, année où j’ai fait mes débuts dans l’univers cinématographique canadien.Récipiendaire de nombreuses bourses et subventions, j’ai réalisé et produit une gamme de films, dont celui de Rick Raxlen, The Strange Blues of Cowboy Red, un long métrage qui fut lancé au Festival des films du Monde de Montréal en 1995."
+    },
+    {
+        "nom": "Vincent LeBlanc",
+        "photo": "media/vincent.jpg",
+        "courriel": "vleblanc@cmaisonneuve.qc.ca",
+        "description": "Formé à l’ÉTS avec une spécialisation en ordinateurs et automatismes, j'ai ensuite obtenu ma maîtrise en Sciences de la communication à l’Université de Montréal, où mon mémoire portait sur les interfaces personne-machine."
+    },
+    {
+        "nom": "Vahik Toroussian",
+        "photo": "media/vahik.jpg",
+        "courriel": "vtoroussian@cmaisonneuve.qc.ca",
+        "description": "J’enseigne au Collège de Maisonneuve depuis 10 ans où j’occupe d’ailleurs le rôle de coordonnateur du programme des Techniques d’intégration multimédia."
+    },
+    {
+        "nom": "Manon Bertrand",
+        "photo": "media/manon.jpg",
+        "courriel": "mbertrand@cmaisonneuve.qc.ca",
+        "description": "Je me rappelle d’être tombée dans la potion magique lorsque j’étais petite. Ensuite, j’ai visité tous les pays avec Tintin. Et, ça n’a plus cessé. De Giacometti à Es Devlin (scénographe) j’ai parcouru le monde des images, des mots et de la musique. Ce monde est ma passion"
+    },
+    {
+        "nom": "Ahmed Boudjani",
+        "photo": "media/ahmed.jpg",
+        "courriel": "aboudjani@cmaisonneuve.qc.ca",
+        "description": ""
+    }
+]

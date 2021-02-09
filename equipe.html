@@ -1,0 +1,60 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style-main.css" />
+    <link rel="stylesheet" href="css/style-equipe.css" />
+    <link rel="stylesheet" href="css/style-footer.css" />
+    <title>L'équipe - TIM - Technique d'Intégration Multimédia</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- code HTML de la page ici -->
+
+    <div id="global">
+      <div id="cover" onclick="fermerPopUp()"></div>
+      <div id="nav" data-pageid="2"></div>
+      <script>
+        $(function () {
+          $("#nav").load("nav.html");
+        });
+      </script>
+
+      <div id="notreEquipe">
+        <div id="grosLosange">
+            <h1>
+                Notre<br>Équipe
+            </h1>
+        </div>
+        <div id="ligneTitre"></div>
+        <div id="cercles"></div>
+    </div>
+      
+      <div id="grille-profs">
+        <grille-prof></grille-prof>
+      </div>
+    </div>
+
+    <script src="/dist/sass.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="/js/vue-markdown.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>
+    <script src="/js/vueConfig.js" type="module"></script>
+  </body>
+
+  <div id="footer" class="footer-page-fixe"></div>
+
+  <!-- fin du code HTML-->
+
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <script src="js/equipe.js"></script>
+</html>

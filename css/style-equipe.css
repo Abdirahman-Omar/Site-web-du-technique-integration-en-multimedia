@@ -1,0 +1,1177 @@
+/* STYLE MOBILE */
+@media screen and (max-width: 600px) {
+
+    #global{
+        margin: 0 auto;
+    }
+
+    #notreEquipe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12em;
+        padding-bottom: 2em;
+        width: 100%;
+    }
+
+    #grosLosange{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        height: 12em;
+        background-color: #6a07d2;
+        transform:rotate(45deg);
+        border:#ff04a1 0.3em solid;
+        z-index: 2;
+    }
+
+    #ligneTitre{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 0.3em;
+        background-color: #ff04a1;
+        z-index: 1;
+    }
+
+    #grosLosange h1{
+        padding-bottom: 0.2em;
+        text-align: center;
+        color : #dfc516;
+        font-family: 'Montserrat',sans-serif;
+        font-weight: bolder;
+        transform: rotate(-45deg);
+        font-size:  1.8em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    #cercles{
+        /*margin-top:2em;*/
+        background-image: url("../media/motif-picot.png");
+        position: absolute;
+        width: 20em;
+        height: 10em;
+        /*background-color:#0da5c5;*/
+    }
+
+    .section-profs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grid-equipe{
+        display: grid;
+        grid-column-gap: 1.4em;
+        grid-row-gap: 1.4em;
+        padding: 6em 1em 4em 1em;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        background-color: #E8E8DB;
+    }
+
+    .boite-photo{
+        height: 11em;
+        width: 8em;
+         border: .4em solid #dfc516; 
+    }
+
+    .boite-photo img{ 
+        width: 100%;
+        height: 100%;
+       object-fit: cover;
+       object-position: left top;
+   } 
+
+   #ligneHorizontale{
+       display: none;
+   }
+
+    /* 1ière colonne */
+    .prof1{
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .prof2{
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    .prof3{
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    .prof4{
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+
+    .prof5{
+        grid-area: 5 / 1 / span 1 / span 1;
+    }
+
+    .prof6{
+        grid-area: 6 / 1 / span 1 / span 1;
+    }
+
+    .prof7{
+        grid-area: 7 / 1 / span 1 / span 1;
+    }
+
+    /* 2e colonne */
+    .prof8{
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    .prof9{
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    .prof10{
+        grid-area: 3 / 2 / span 1 / span 1;
+    }
+
+    .prof11{
+        grid-area: 4 / 2 / span 1 / span 1;
+    }
+
+    .prof12{
+        grid-area: 5 / 2 / span 1 / span 1;
+    }
+
+    .prof13{
+        grid-area: 6 / 2 / span 1 / span 1;
+    }
+
+    .prof14{
+        grid-area: 7 / 2 / span 1 / span 1;
+    }
+
+    
+#popup{
+    margin: 0 auto;
+    /* display: none; */
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 0;
+    z-index: 10001;
+    margin: 0 auto;
+    background-color: #E8E8DB;
+    border:0.3em solid #dfc516 ;
+    box-shadow: .5em .5em #ff04a1;
+    top: 75;
+    left: 0;
+    right: 0;
+    width: 85%;
+    height: 75%;
+    grid-template-rows:[img] 10% [nom] 5% [courriel] 5% [desc] 70% [cours] 10%;
+    padding-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-close {
+    color:  #6a07d2;
+    line-height: 50px;
+    font-size: 3em;
+    position: absolute;
+    right: -0.05em; 
+    text-align: center;
+     top: 0.03em; 
+    width: 1em;
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
+  }
+
+  .modal-close:active {
+    color: white;
+    line-height: 50px;
+    font-size: 2em;
+    position: absolute;
+    right: -0.05em; 
+    text-align: center;
+     top: 0.03em; 
+    width: 1em;
+    text-decoration: none;
+    font-family: 'Montserrat',sans-serif;
+  }
+
+@keyframes popupOpen {
+    0%{
+      transform: scale(0.0);
+    }
+
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes popupClose {
+    0%{
+      transform: scale(1);
+    }
+
+    100%{
+      transform: scale(0.0);
+    }
+  }
+
+  .boitePortraitPopup{
+    margin: 0 auto;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border:#ff04a1 0.3em solid;
+    grid-area: img;
+    display: flex;
+    justify-self: center;
+  }
+
+   .boitePortraitPopup img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    border-radius: 50%;
+  }
+
+  #nomProf{
+      font-size: 1em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color:  #6a07d2;
+      grid-area: nom;
+      letter-spacing: .2em;
+  }
+
+  #courrielProf{
+      font-size: .6em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color:  #6a07d2;
+      grid-area: courriel;
+      letter-spacing: .2em;
+  }
+
+  #courrielProf:hover{
+    color: #dfc516;
+    cursor: pointer;
+  }
+
+  #courrielProf:active{
+    color: white;
+  }
+  
+  #areaDescriptionEspacementScrollbar{
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-area: desc;
+    padding: 0 3vw 0 3vw;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    color: white;
+    line-height: 2.3em;
+    letter-spacing: .2em;
+  }
+
+  #description{
+    height: 55%;
+    width: 90%;
+    font-size: .65em;
+    overflow-y: scroll;
+    padding: 0 2em 0 2em;
+    color: black;
+  }
+
+    #description::-webkit-scrollbar {
+    width: .4em;
+  }
+
+  #description::-webkit-scrollbar-track {
+    background: none; 
+  }
+
+  #description::-webkit-scrollbar-thumb {
+    background: #dfc516;
+  }  
+
+  #coursDonnes{
+      grid-area: cours;
+      color:  #6a07d2;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      font-size: 1em;
+      letter-spacing: .2em;
+  }
+}
+
+/* STYLE TABLETTE */
+@media screen and (max-width: 768px) and (min-width: 600px){
+
+    #global{
+        margin: 0 auto;
+    }
+
+    #notreEquipe{
+        display: none;
+    }
+
+    .section-profs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grid-equipe{
+        display: grid;
+        grid-column-gap: 1.4em;
+        grid-row-gap: 1.4em;
+        padding: 5em 1em 0 1em;
+        grid-template-columns: auto auto auto auto auto ;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        background-color: #E8E8DB;
+    }    
+
+    .boite-photo{
+        height: 10em;
+        width: 6.4em;
+         border: .4em solid #dfc516; 
+              /* animation  */
+        animation-name: floating; 
+        animation-duration: 3s; 
+        animation-iteration-count: infinite; 
+        animation-timing-function: ease-in-out;
+        z-index: 2;
+    }
+
+    @keyframes floating{ 
+        0% { transform: translate(0,  0px); } 
+        50%  { transform: translate(0, .6em); } 
+        100%   { transform: translate(0, -0px); }
+    } 
+
+    .boite-photo img{ 
+        width: 100%;
+        height: 100%;
+       object-fit: cover;
+       object-position: left top;
+   } 
+
+   .boite-photo:hover{
+    cursor: pointer;
+    box-shadow: .5em .5em #ff04a1;
+    }
+
+    .boite-photo:active{
+        cursor: pointer;
+        filter: grayscale();
+        border: .4em solid white;
+        box-shadow: .5em .5em white;
+    }
+
+    #ligneHorizontale{
+        display: none;
+    }
+
+    /* 1ière colonne */
+    .prof1{
+        grid-area: 3 / 1 / span 2 / span 1;
+    }
+
+    .prof2{
+        grid-area: 5 / 1 / span 2 / span 1;
+    }
+
+    /* 2e colonne */
+    .prof3{
+        grid-area: 2 / 2 / span 2 / span 1;
+    }
+
+    .prof4{
+        grid-area: 4 / 2 / span 2 / span 1;
+    }
+
+    .prof5{
+        grid-area: 6 / 2 / span 2 / span 1;
+    }
+
+    /* 3e colonne */
+    .prof6{
+        grid-area: 1 / 3 / span 2 / span 1;
+    }
+
+    .prof7{
+        grid-area: 3 / 3 / span 2 / span 1;
+    }
+
+    .prof8{
+        grid-area: 5 / 3 / span 2 / span 1;
+    }
+
+    .prof9{
+        grid-area: 7 / 3 / span 2 / span 1;
+    }
+
+    /* 4e colonne */
+    .prof10{
+        grid-area: 2 / 4 / span 2 / span 1;
+    }
+
+    .prof11{
+        grid-area: 4 / 4 / span 2 / span 1;
+    }
+
+    .prof12{
+        grid-area: 6 / 4 / span 2 / span 1;
+    }
+
+    /* 5e colonne */
+    .prof13{
+        grid-area: 3 / 5 / span 2 / span 1;
+    }
+
+    .prof14{
+        grid-area: 5 / 5 / span 2 / span 1;
+    }
+
+    #popup{
+        margin: 0 auto;
+        /* display: none; */
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 0;
+        z-index: 10001;
+        margin: 0 auto;
+        background-color: #E8E8DB;
+        border:0.3em solid #dfc516 ;
+        box-shadow: .5em .5em #ff04a1;
+        top: 10%;
+        left: 0;
+        right: 0;
+        width: 75%;
+        height: 80%;
+        animation: popupOpen 0.5s;
+        grid-template-rows:[img] 30% [nom] 5% [courriel] 3% [desc] 55% [cours] 7%;
+        padding-top: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .modal-close {
+        color:  #6a07d2;
+        line-height: 50px;
+        font-size: 4em;
+        position: absolute;
+        right: -0.05em; 
+        text-align: center;
+         top: 0.1em; 
+        width: 1em;
+        text-decoration: none;
+        font-family: 'Montserrat',sans-serif;
+      }
+    
+      .modal-close:active {
+        color: white;
+        line-height: 50px;
+        font-size: 3em;
+        position: absolute;
+        right: -0.05em; 
+        text-align: center;
+         top: 0.1em; 
+        width: 1em;
+        text-decoration: none;
+        font-family: 'Montserrat',sans-serif;
+      }
+    
+    @keyframes popupOpen {
+        0%{
+          transform: scale(0.0);
+        }
+    
+        100%{
+          transform: scale(1);
+        }
+      }
+    
+      @keyframes popupClose {
+        0%{
+          transform: scale(1);
+        }
+    
+        100%{
+          transform: scale(0.0);
+        }
+      }
+    
+      .boitePortraitPopup{
+        margin:0 auto;
+        width: 9em;
+        height: 9em;
+        border-radius: 50%;
+        border:#ff04a1 0.4em solid;
+        grid-area: img;
+        margin-bottom: 1em;
+        display: flex;
+        justify-self: center;
+      }
+    
+       .boitePortraitPopup img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+        border-radius: 50%;
+      }
+    
+      #nomProf{
+          font-size: 1.9em;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          color:  #6a07d2;
+          grid-area: nom;
+          letter-spacing: .2em;
+          margin-bottom: auto;
+      }
+    
+      #courrielProf{
+          font-size: 1em;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          color:  #6a07d2;
+          grid-area: courriel;
+          letter-spacing: .2em;
+      }
+    
+      #courrielProf:hover{
+        color: #ff04a1;
+        cursor: pointer;
+      }
+    
+      #courrielProf:active{
+        color: white;
+      }
+      
+      #areaDescriptionEspacementScrollbar{
+        margin-top: 3em;
+        margin-bottom: 0;
+        grid-area: desc;
+        padding: 0 6vw 0 6vw;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 500;
+        color: white;
+        line-height: 2.5em;
+        letter-spacing: .2em;
+      }
+    
+      #description{
+        height: 50%;
+        width: 90%;
+        font-size: .8em;
+        overflow-y: scroll;
+        padding: 0 3em 0 3em;
+        color: black;
+      }
+    
+        #description::-webkit-scrollbar {
+        width: .4em;
+      }
+    
+      #description::-webkit-scrollbar-track {
+        background: none; 
+      }
+    
+      #description::-webkit-scrollbar-thumb {
+        background: #dfc516;
+      }  
+    
+      #coursDonnes{
+          grid-area: cours;
+          color:  #6a07d2;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bolder;
+          font-size: 1em;
+          letter-spacing: .2em;
+      }
+}
+
+/* STYLE GRANDE TABLETTE */
+@media screen and (max-width: 1200px) and (min-width: 769px){
+    
+    #global{
+        margin: 0 auto;
+    }
+
+    #notreEquipe{
+        display: none;
+    }
+
+    .section-profs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grid-equipe{
+        display: grid;
+        grid-column-gap: 1.4em;
+        grid-row-gap: 1.4em;
+        padding: 6em 1em 0 1em;
+        grid-template-columns: auto auto auto auto auto ;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        background-color: #E8E8DB;
+    }    
+
+    .boite-photo{
+        height: 15em;
+        width: 9.6em;
+         border: .4em solid #dfc516; 
+        /* animation  */
+        animation-name: floating; 
+        animation-duration: 3s; 
+        animation-iteration-count: infinite; 
+        animation-timing-function: ease-in-out;
+        z-index: 2;
+}
+
+@keyframes floating{ 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, .6em); } 
+    100%   { transform: translate(0, -0px); }
+} 
+
+    .boite-photo img{ 
+        width: 100%;
+        height: 100%;
+       object-fit: cover;
+       object-position: left top;
+   } 
+
+       .boite-photo:hover{
+        cursor: pointer;
+        box-shadow: .5em .5em #ff04a1;
+    }
+
+    .boite-photo:active{
+        cursor: pointer;
+        filter: grayscale();
+        border: .4em solid white;
+        box-shadow: .5em .5em white;
+    }
+
+    /* 1ière colonne */
+    .prof1{
+        grid-area: 3 / 1 / span 2 / span 1;
+    }
+
+    .prof2{
+        grid-area: 5 / 1 / span 2 / span 1;
+    }
+
+    /* 2e colonne */
+    .prof3{
+        grid-area: 2 / 2 / span 2 / span 1;
+    }
+
+    .prof4{
+        grid-area: 4 / 2 / span 2 / span 1;
+    }
+
+    .prof5{
+        grid-area: 6 / 2 / span 2 / span 1;
+    }
+
+    /* 3e colonne */
+    .prof6{
+        grid-area: 1 / 3 / span 2 / span 1;
+    }
+
+    .prof7{
+        grid-area: 3 / 3 / span 2 / span 1;
+    }
+
+    .prof8{
+        grid-area: 5 / 3 / span 2 / span 1;
+    }
+
+    .prof9{
+        grid-area: 7 / 3 / span 2 / span 1;
+    }
+
+    /* 4e colonne */
+    .prof10{
+        grid-area: 2 / 4 / span 2 / span 1;
+    }
+
+    .prof11{
+        grid-area: 4 / 4 / span 2 / span 1;
+    }
+
+    .prof12{
+        grid-area: 6 / 4 / span 2 / span 1;
+    }
+
+    /* 5e colonne */
+    .prof13{
+        grid-area: 3 / 5 / span 2 / span 1;
+    }
+
+    .prof14{
+        grid-area: 5 / 5 / span 2 / span 1;
+    }
+
+    
+    #popup{
+        margin: 0 auto;
+        /* display: none; */
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 0;
+        z-index: 10001;
+        margin: 0 auto;
+        background-color: #E8E8DB;
+        border:0.3em solid #dfc516 ;
+        box-shadow: .5em .5em #ff04a1;
+        top: 10%;
+        left: 0;
+        right: 0;
+        width: 75%;
+        height: 80%;
+        animation: popupOpen 0.5s;
+        grid-template-rows:[img] 30% [nom] 5% [courriel] 3% [desc] 55% [cours] 7%;
+        padding-top: 2em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    @keyframes popupOpen {
+        0%{
+          transform: scale(0.0);
+        }
+    
+        100%{
+          transform: scale(1);
+        }
+      }
+    
+      @keyframes popupClose {
+        0%{
+          transform: scale(1);
+        }
+    
+        100%{
+          transform: scale(0.0);
+        }
+      }
+
+      .modal-close {
+        color:  #6a07d2;
+        line-height: 50px;
+        font-size: 6em;
+        position: absolute;
+        right: -0.05em; 
+        text-align: center;
+        top: 0.25em; 
+        width: 1em;
+        text-decoration: none;
+        font-family: 'Montserrat',sans-serif;
+      }
+    
+      .modal-close:active {
+        color: white;
+        line-height: 50px;
+        font-size: 3em;
+        position: absolute;
+        right: -0.05em; 
+        text-align: center;
+        top: 0.25em; 
+        width: 1em;
+        text-decoration: none;
+        font-family: 'Montserrat',sans-serif;
+      }
+    
+      .boitePortraitPopup{
+        margin: 0 auto;
+        width: 11em;
+        height: 11em;
+        border-radius: 50%;
+        border:#ff04a1 0.4em solid;
+        grid-area: img;
+        margin-bottom: 1em;
+        display: flex;
+        justify-self: center;
+      }
+    
+       .boitePortraitPopup img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+        border-radius: 50%;
+      }
+    
+      #nomProf{
+          font-size: 2.2em;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          color:  #6a07d2;
+          grid-area: nom;
+          letter-spacing: .2em;
+          margin-bottom: auto;
+      }
+    
+      #courrielProf{
+          font-size: 1.2em;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          color:  #6a07d2;
+          grid-area: courriel;
+          letter-spacing: .2em;
+      }
+    
+      #courrielProf:hover{
+        color: #ff04a1;
+        cursor: pointer;
+      }
+    
+      #courrielProf:active{
+        color: white;
+      }
+      
+      #areaDescriptionEspacementScrollbar{
+        margin-top: 2em;
+        margin-bottom: 0;
+        grid-area: desc;
+        padding: 0 6vw 0 6vw;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 500;
+        color: white;
+        line-height: 3.4em;
+        letter-spacing: .2em;
+      }
+    
+      #description{
+        height: 55%;
+        width: 90%;
+        font-size: 1.2em;
+        overflow-y: scroll;
+        padding: 0 3em 0 3em;
+        color: black;
+      }
+    
+        #description::-webkit-scrollbar {
+        width: .4em;
+      }
+    
+      #description::-webkit-scrollbar-track {
+        background: none; 
+      }
+    
+      #description::-webkit-scrollbar-thumb {
+        background: #dfc516;
+      }  
+    
+      #coursDonnes{
+          grid-area: cours;
+          color:  #6a07d2;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: bolder;
+          font-size: 1.2em;
+          letter-spacing: .2em;
+      }
+}
+
+/* STYLE GRAND ÉCRAN */
+@media screen and (min-width: 1200px){
+
+#global{
+    margin: 0 auto;
+}
+
+#notreEquipe{
+    display: none;
+}
+
+.section-profs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-equipe{
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-row-gap: 1.4em;
+    padding: 2em 1em 0 1em;
+    grid-template-columns: auto auto auto auto auto ;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    background-color: #E8E8DB;
+}
+
+    .boite-photo{
+    height: 17vh;
+    width: 6vw;
+     border: .4em solid #dfc516; 
+     /* animation  */
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+    z-index: 2;
+}
+
+@keyframes floating{ 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, .6em); } 
+    100%   { transform: translate(0, -0px); }
+} 
+
+ .boite-photo img{ 
+     width: 100%;
+     height: 100%;
+    object-fit: cover;
+    object-position: left top;
+} 
+
+.boite-photo:hover{
+    cursor: pointer;
+    box-shadow: .5em .5em #ff04a1;
+}
+
+.boite-photo:active{
+    cursor: pointer;
+    filter: grayscale();
+    border: .4em solid white;
+    box-shadow: .5em .5em white;
+}
+
+#ligneHorizontale{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100%;
+    height:0.3em;
+    background-color: #dfc516;
+    z-index: -1;
+}
+
+/* 1ière colonne */
+.prof1{
+    grid-area: 3 / 1 / span 2 / span 1;
+}
+
+.prof2{
+    grid-area: 5 / 1 / span 2 / span 1;
+}
+
+/* 2e colonne */
+.prof3{
+    grid-area: 2 / 2 / span 2 / span 1;
+}
+
+.prof4{
+    grid-area: 4 / 2 / span 2 / span 1;
+}
+
+.prof5{
+    grid-area: 6 / 2 / span 2 / span 1;
+}
+
+/* 3e colonne */
+.prof6{
+    grid-area: 1 / 3 / span 2 / span 1;
+}
+
+.prof7{
+    grid-area: 3 / 3 / span 2 / span 1;
+}
+
+.prof8{
+    grid-area: 5 / 3 / span 2 / span 1;
+}
+
+.prof9{
+    grid-area: 7 / 3 / span 2 / span 1;
+}
+
+/* 4e colonne */
+.prof10{
+    grid-area: 2 / 4 / span 2 / span 1;
+}
+
+.prof11{
+    grid-area: 4 / 4 / span 2 / span 1;
+}
+
+.prof12{
+    grid-area: 6 / 4 / span 2 / span 1;
+}
+
+/* 5e colonne */
+.prof13{
+    grid-area: 3 / 5 / span 2 / span 1;
+}
+
+.prof14{
+    grid-area: 5 / 5 / span 2 / span 1;
+}
+
+#cover{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 10000;
+    background-color: #7F7F7F;
+    opacity: 0.5;
+    animation: popupClose 0.3s;
+}
+
+#popup{
+    margin: 0 auto;
+    /* display: none; */
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 0;
+    z-index: 10001;
+    margin: 0 auto;
+    background-color: #E8E8DB;
+    border:0.3em solid #dfc516 ;
+    box-shadow: .5em .5em #ff04a1;
+    top: 16.25%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 65%;
+    animation: popupOpen 0.5s;
+    grid-template-rows:[img] 30% [nom] 5% [courriel] 3% [desc] 42% [cours] 10%;
+    padding-top: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes popupOpen {
+    0%{
+      transform: scale(0.0);
+    }
+
+    100%{
+      transform: scale(1);
+    }
+  }
+
+  @keyframes popupClose {
+    0%{
+      transform: scale(1);
+    }
+
+    100%{
+      transform: scale(0.0);
+    }
+  }
+
+  .modal-close {
+      display: none;
+  }
+
+  .boitePortraitPopup{
+    margin:0 auto;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    border:#ff04a1 0.4em solid;
+    grid-area: img;
+    margin-bottom: 1em;
+    display: flex;
+    justify-self: center;
+  }
+
+   .boitePortraitPopup img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    border-radius: 50%;
+  }
+
+  #nomProf{
+      font-size: 1.9em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color:  #6a07d2;
+      grid-area: nom;
+      letter-spacing: .2em;
+      margin-bottom: auto;
+  }
+
+  #courrielProf{
+      font-size: .9em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color:  #6a07d2;
+      grid-area: courriel;
+      letter-spacing: .2em;
+  }
+
+  #courrielProf:hover{
+    color: #ff04a1;
+    cursor: pointer;
+  }
+
+  #courrielProf:active{
+    color: white;
+  }
+  
+  #areaDescriptionEspacementScrollbar{
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-area: desc;
+    padding: 0 6vw 0 6vw;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    color: white;
+    line-height: 2.5em;
+    letter-spacing: .2em;
+  }
+
+  #description{
+    height: 40%;
+    width: 90%;
+    font-size: .8em;
+    overflow-y: scroll;
+    padding: 0 3em 0 3em;
+    color:black;
+  }
+
+    #description::-webkit-scrollbar {
+    width: .4em;
+  }
+
+  #description::-webkit-scrollbar-track {
+    background: none; 
+  }
+
+  #description::-webkit-scrollbar-thumb {
+    background: #dfc516;
+  }  
+
+  #coursDonnes{
+      grid-area: cours;
+      color:  #6a07d2;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      font-size: 1em;
+      letter-spacing: .2em;
+  }
+}
+

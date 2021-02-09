@@ -1,0 +1,319 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style-main.css">
+        <link rel="stylesheet" href="css/style-evenements.css">
+        <link rel="stylesheet" href="css/style-footer.css">
+        <title>Événements - TIM - Technique d'Intégration Multimédia</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+
+    <body>
+
+    <div id="global" >
+
+        <div id="cover" onclick="fermerPopUp()"></div>
+        <div id="nav" data-pageid="3"></div>
+
+        <script>
+            $(function(){
+            $("#nav").load("nav.html");
+            });
+        </script>
+
+        <div class="evenement-recent" onclick="poppup()" onmouseover="enterHoverEventRecent()" onmouseout="exitHoverEventRecent()">
+
+            <div id="titre-page">
+                <div class="ligne"></div>
+                <h1 id="Evenement">événements</h1>
+                <div class="ligne"></div>
+            </div>
+
+            <div class="border-outer-top">
+                <div class="border-top"> 
+            <div id="event">
+            <div class="event-item" id="description">
+                <h1 class="titre-event-recent">arcades tim 2020</h1>
+                <h3>le 15 décembre de 15:00 à 21:00</h3>
+                <p id="description-event-recent">description courte de l’événement : Lorem ipsum 
+                    dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendi
+                    sse ultrices gravida. Risus commodo viverra
+                </p>
+            </div>
+            <div class="event-item">
+                <img  class="imgEvent" src="media/event5.jpg" alt="">
+                <div id="enCours"><h1>en Cours</h1></div>
+            </div>
+
+            <div id="afficherPlus-mobile" onclick="poppup()" >
+                <div class="border-outer-mobile">
+                    <div class="border-mobile"> 
+                        <a id="bouton">en savoir plus</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>  
+        </div> 
+
+        <div class="grid-evenement">
+
+        <div class="evenement-dans-grille" onclick="poppup()">
+            <div class="grid-item"><img class="imgEvent"src="media/event1.jpg" alt=""></div>
+
+            <div class="grid-item">
+                <h1 class="titre-event">tim_talk hiver 2020</h1>
+                <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                    dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendi
+                    sse ultrices gravida. Risus commodo viverra
+                </p>
+
+                <div id="afficherPlus-mobile" onclick="poppup()">
+                    <div class="border-outer-mobile">
+                        <div class="border-mobile"> 
+                            <a id="bouton" >en savoir plus</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="evenement-dans-grille" onclick="poppup()" >
+            <div class="grid-item noMobile"><img class="imgEvent"src="media/event2.jpg" alt=""></div>
+
+            <div class="grid-item noMobile">
+                <h1 class="titre-event">tim_talk hiver 2020</h1>
+                <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                    dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendi
+                    sse ultrices gravida. Risus commodo viverra
+                </p>
+
+                <div id="afficherPlus-mobile" onclick="poppup()" >
+                    <div class="border-outer-mobile">
+                        <div class="border-mobile"> 
+                            <a id="bouton">en savoir plus</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="evenement-dans-grille" onclick="poppup()">
+            <div class="grid-item noMobile">
+                
+                <h1 class="titre-event">tim_talk hiver 2020</h1>
+                <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                    dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendi
+                    sse ultrices gravida. Risus commodo viverra
+                </p>
+           
+                <div id="afficherPlus-mobile" onclick="poppup()">
+                    <div class="border-outer-mobile">
+                        <div class="border-mobile"> 
+                            <a id="bouton" href="">en savoir plus</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="grid-item noMobile"><img class="imgEvent"src="media/event3.jpg" alt=""></div>
+        </div>
+
+
+
+        <div class="evenement-dans-grille" onclick="poppup()">
+            <div class="grid-item noMobile">
+                <h1 class="titre-event">tim_talk hiver 2020</h1>
+                <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                    dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendi
+                    sse ultrices gravida. Risus commodo viverra
+                </p>
+            </div>
+
+            <div class="grid-item noMobile"><img class="imgEvent"src="media/event4.jpg" alt=""></div>
+        </div>
+
+        </div>
+
+        <div class="grid-evenement" id="grille2">
+
+            <div class="evenement-dans-grille" onclick="poppup()">
+                <div class="grid-item"><img class="imgEvent"src="media/event6.jpg" alt=""></div>
+    
+                <div class="grid-item">
+                    <h1 class="titre-event">tim_talk hiver 2020</h1>
+                    <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                    <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                        dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Quis ipsum suspendi
+                        sse ultrices gravida. Risus commodo viverra
+                    </p>
+    
+                    <div id="afficherPlus-mobile" onclick="poppup()">
+                        <div class="border-outer-mobile">
+                            <div class="border-mobile"> 
+                                <a id="bouton" >en savoir plus</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="evenement-dans-grille" onclick="poppup()" >
+                <div class="grid-item noMobile"><img class="imgEvent"src="media/event7.jpg" alt=""></div>
+    
+                <div class="grid-item noMobile">
+                    <h1 class="titre-event">tim_talk hiver 2020</h1>
+                    <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                    <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                        dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Quis ipsum suspendi
+                        sse ultrices gravida. Risus commodo viverra
+                    </p>
+    
+                    <div id="afficherPlus-mobile" onclick="poppup()" >
+                        <div class="border-outer-mobile">
+                            <div class="border-mobile"> 
+                                <a id="bouton">en savoir plus</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="evenement-dans-grille" onclick="poppup()">
+                <div class="grid-item noMobile">
+                    
+                    <h1 class="titre-event">tim_talk hiver 2020</h1>
+                    <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                    <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                        dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Quis ipsum suspendi
+                        sse ultrices gravida. Risus commodo viverra
+                    </p>
+               
+                    <div id="afficherPlus-mobile" onclick="poppup()">
+                        <div class="border-outer-mobile">
+                            <div class="border-mobile"> 
+                                <a id="bouton" href="">en savoir plus</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="grid-item noMobile"><img class="imgEvent"src="media/event8.jpg" alt=""></div>
+            </div>
+    
+    
+    
+            <div class="evenement-dans-grille" onclick="poppup()">
+                <div class="grid-item noMobile">
+                    <h1 class="titre-event">tim_talk hiver 2020</h1>
+                    <h3 class="date">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+                    <p class="description-txt">description courte de l’événement : Lorem ipsum 
+                        dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Quis ipsum suspendi
+                        sse ultrices gravida. Risus commodo viverra
+                    </p>
+                </div>
+    
+                <div class="grid-item noMobile"><img class="imgEvent"src="media/event9.jpg" alt=""></div>
+            </div>
+    
+        </div>
+
+        <div id="afficherPlus" onclick="afficherPlusEvent()">
+            <div class="border-outer" onmouseover="enterHoverAffichez()" onmouseout="exitHoverAffichez()">
+                <div class="border"> 
+                    <a id="bouton">afficher plus</a> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="popup">
+
+        <div id="imageSelect">
+            
+            <img  class="imgSelect" src="media/event4.jpg" alt="">
+            <img  class="imgSelect" src="media/event1.jpg" alt="">
+            <img  class="imgSelect" src="media/event2.jpg" alt="">
+        
+            <div id="dot" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <a onclick="fermerPopUp()" title="Close" class="modal-close">X</a>
+        </div>
+
+        <div class="itemSelect">
+    
+            <h1 class="titre-event-select">tim_talk hiver 2020</h1>
+            <h3  class="date-select">jeudi 13 février 2020 de 12h15 à 14h00</h3>
+            <h3 id="local" class="date-select">local b-1164</h3>
+            
+            <div id="description">
+            <div id="texte-pop">
+            <p class="description-txt-popup">
+                Tous les étudiants TIM (1ère, 2e et 3 année) sont invités pour un petit TIM-TALK. Cet événement 
+                vous permet de rencontrer 4 anciens finissants du programme TIM-Maisonneuve. 
+                Ils viennent vous parler de leur parcours professionnel depuis leur graduation en TIM.
+            </p>
+    
+            <p class="description-txt-popup">
+                Alors, si vous avez besoin d'un peu de motivation, d'un petit pep-talk, 
+                d'inspiration ou juste de venir voir ce que ça devient un bon timien(ne), alors cet événement est le bon pour vous.
+            </p>
+    
+            <p class="description-txt-popup">Au plaisir de vous y voir en grand nombre!</p>
+            </div>
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <div class="ligne bottom"></div>
+
+    <div id="plus" onclick="afficherPlusEventMobile()">
+        <div id="plus1"></div>
+        <div id="plus2"></div>
+        <div id="plus3"></div>
+        <div id="plus4"></div>
+    </div>
+
+    </body>
+
+    <div id="footer" class="footer-page-fixe"></div>
+
+    <script>
+        $(function(){
+        $("#footer").load("footer.html");
+        });
+    </script>
+
+    <script src="js/evenements.js"></script>
+
+</html>
